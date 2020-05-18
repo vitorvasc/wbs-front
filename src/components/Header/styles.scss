@@ -1,6 +1,6 @@
 header#main-header {
 	padding: 5px;
-	height: 55px;
+	height: 50px;
 	background-color: white;
 
 	div.logo {
@@ -10,7 +10,7 @@ header#main-header {
 		align-items: center;
 
 		img {
-			max-height: 45px;
+			max-height: 43px;
 		}
 
 		h5 {
@@ -43,7 +43,7 @@ header#main-header {
             }
 
             &.nav-selected {
-                border-bottom: 3px solid darken(#DB0011, 10%);
+                border-bottom: 3px solid #DB0011;
                 transition: 300ms all ease 0s;
             }
         }
