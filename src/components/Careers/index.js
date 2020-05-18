@@ -6,13 +6,13 @@ import Banner from '../Banner';
 import './styles.scss';
 
 const Careers = () => {
-  const title = "A disrupção digital";
-  const description = "Você não para, e a gente também não. Uma equipe de profissionais extremamente qualificados sempre prontos para te auxiliar em qualquer ocasião.";
+  const title = "Seja parte da mudança";
+  const description = "Estamos constantemente admitindo novas pessoas incríveis de diversas áreas para se tornarem parte da mudança. Você acha que têm o necessário para fazer parte do nosso time?";
 
   return <div>
     <Header />
-    <Banner image="./assets/homeBanner.png" title={title} description={description} />
+    <Banner image="./assets/placeholderBanner.png" title={title} description={description} />
   </div>;
-}
+};
 
 export default Careers;
