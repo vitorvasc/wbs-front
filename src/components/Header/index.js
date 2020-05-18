@@ -22,7 +22,7 @@ const Header = () => (
           <NavLink to="/contato" activeClassName="nav-selected">Contato</NavLink>
         </div>
         <div className="col s4 conta">
-          <a><AccountIcon /> Acessar minha conta</a>
+          <NavLink to="/minha-conta" activeClassName="nav-selected"><AccountIcon /> Acessar minha conta</NavLink>
         </div>
       </div>
     </div>
