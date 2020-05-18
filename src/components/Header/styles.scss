@@ -28,21 +28,25 @@ header#main-header {
         align-items: center;
         
         a {
-            padding: 0 12px;
+            padding: 0 20px;
             font-weight: 300;
             color: black;
             height: 45px;
             display: flex;
             align-items: center;
+            border-bottom: 3px solid transparent;
+            transition: 300ms all ease 0s;
 
             &:hover {
-                border-bottom: 3px lighten(#DB0011, 10%);
+                border-bottom: 3px solid lighten(#DB0011, 25%);
+                transition: 300ms all ease 0s;
+            }
+
+            &.nav-selected {
+                border-bottom: 3px solid darken(#DB0011, 10%);
+                transition: 300ms all ease 0s;
             }
         }
-    }
-
-    .nav-selected {
-        border-bottom: 3px #DB0011;
     }
 
     div.conta {
