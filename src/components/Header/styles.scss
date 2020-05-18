@@ -4,6 +4,7 @@ header#main-header {
 	background-color: white;
 
 	div.logo {
+        color: black;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -33,7 +34,15 @@ header#main-header {
             height: 45px;
             display: flex;
             align-items: center;
+
+            &:hover {
+                border-bottom: 3px lighten(#DB0011, 10%);
+            }
         }
+    }
+
+    .nav-selected {
+        border-bottom: 3px #DB0011;
     }
 
     div.conta {
