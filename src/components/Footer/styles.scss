@@ -1,7 +1,49 @@
 footer#main-footer {
-	padding: 5px;
-	height: 300px;
+    padding: 5px;
+    padding: 20px 0;
     background-color: #222222;
+    color: white;
+    text-align: left;
+    font-size: .8rem;
+    line-height: 1.1rem;
+    position: relative;
 
     user-select: none;
+
+    @media only screen and (min-width: 993px) {
+        .container {
+            width: 85%;
+        }
+    }  
+
+    div.row {
+        margin-bottom: 0;
+    }
+
+    div.about, div.credits {
+        min-height: 130px;
+    }
+
+    div.credits {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        img {
+            max-width: 40px;
+        }
+    }
+
+    div.top {
+        position: absolute;
+        right: 80px;
+        top: 0px; 
+
+        svg {
+            width: 35px;
+            cursor: pointer;
+        }
+    }
 }
