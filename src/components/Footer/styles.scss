@@ -6,7 +6,11 @@ footer#main-footer {
 	text-align: left;
 	font-size: 0.8rem;
 	line-height: 1.1rem;
-	position: relative;
+	min-height: 155px;
+
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 
 	user-select: none;
 
@@ -18,7 +22,7 @@ footer#main-footer {
 
 	div.row {
 		margin-bottom: 0;
-    }
+	}
 
 	div.links {
 		text-align: center;
@@ -36,7 +40,8 @@ footer#main-footer {
 		text-align: center;
 	}
 
-	div.copyright, div.credits {
+	div.copyright,
+	div.credits {
 		p {
 			margin-bottom: 0px;
 		}

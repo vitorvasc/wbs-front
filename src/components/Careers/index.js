@@ -18,7 +18,7 @@ const Careers = () => {
       cards: [
         {
           type: 'CAREER',
-          location: 'USA | SAN ANDREAS - LOS SANTOS',
+          location: 'USA | San Andreas - Los Santos',
           career: 'Analista de tecnologia',
           sector: 'Engenharia de software',
           creation: 'publicado 1 dia atrás',
@@ -26,7 +26,7 @@ const Careers = () => {
         },
         {
           type: 'CAREER',
-          location: 'USA | SAN ANDREAS - LOS SANTOS',
+          location: 'USA | San Andreas - Los Santos',
           career: 'Gerente de risco de crédito',
           sector: 'Credit policies',
           creation: 'publicado 5 dias atrás',
@@ -34,7 +34,7 @@ const Careers = () => {
         },
         {
           type: 'CAREER',
-          location: 'USA | SAN ANDREAS - LOS SANTOS',
+          location: 'USA | San Andreas - Los Santos',
           career: 'Estágio em equity research',
           sector: 'Investment banking',
           creation: 'publicado 2 semanas atrás',
@@ -42,7 +42,7 @@ const Careers = () => {
         },
         {
           type: 'CAREER',
-          location: 'USA | SAN ANDREAS - LOS SANTOS',
+          location: 'USA | San Andreas - Los Santos',
           career: 'Analista de investimentos',
           sector: 'Investment banking',
           creation: 'publicado 3 semanas atrás',
@@ -50,7 +50,7 @@ const Careers = () => {
         },
         {
           type: 'CAREER',
-          location: 'USA | SAN ANDREAS - LOS SANTOS',
+          location: 'USA | San Andreas - Los Santos',
           career: 'Analista de equities e renda fixa',
           sector: 'Mesa de operações',
           creation: 'publicado 1 mês atrás',
@@ -58,7 +58,7 @@ const Careers = () => {
         },
         {
           type: 'CAREER',
-          location: 'USA | SAN ANDREAS - LOS SANTOS',
+          location: 'USA | San Andreas - Los Santos',
           career: 'Nome do cargo da oportunidade',
           sector: 'Nome da área',
           creation: 'publicado 2 anos atrás',

@@ -1,4 +1,23 @@
+* {
+	box-sizing: border-box;
+}
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html,
 body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #DB0011;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #db0011;
+	height: 100%;
+	position: relative;
+
+	div#root {
+		min-height: 100vh; /* will cover the 100% of viewport */
+		overflow: hidden;
+		display: block;
+		position: relative;
+		padding-bottom: 155px; /* height of your footer */
+	}
 }
