@@ -18,16 +18,19 @@ const Home = () => {
 
   const cards = [
     {
+      type: 'INFO',
       svg: './assets/invista.svg',
       title: 'Invista seu dinheiro',
       description: 'Conte com nossos corretores para lhe indicar a melhor opção de investimento na atualidade.',
     },
     {
+      type: 'INFO',
       svg: './assets/taxa.svg',
       title: 'Taxas?',
       description: 'Nós não temos esta palavra em nosso dicionário. Nossos serviços são gratuitos.',
     },
     {
+      type: 'INFO',
       svg: './assets/seguranca.svg',
       title: 'Segurança',
       description: 'Trabalhamos dia e noite para manter a garantia de seus investimentos.',
@@ -58,7 +61,7 @@ const Home = () => {
     <Banner image="./assets/homeBanner.png" title={title} description={description} button={button} />
     <div className="container vantagens">
       <Slider {...sliderSettings}>
-        {cards.map(c => <Card key={c} svg={c.svg} title={c.title} description={c.description} />)}
+        {cards.map(c => <Card key={c} config={c} />)}
       </Slider>
     </div>
   </div>;

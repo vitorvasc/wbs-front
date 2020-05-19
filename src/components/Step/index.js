@@ -1,11 +1,27 @@
 import React from 'react';
 
+import OrganizationalChart from '../OrganizationalChart';
+import CardList from '../CardList';
+
 import './styles.scss';
 
-const Step = ({ title, description, color, fontColor }) => {
-  return <div className="step" style={{ backgroundColor: color, color: fontColor }}>
-    <h1>{title}</h1>
-    {description.split('\n').map(d => <h4>{d}</h4>)}
+const Step = ({ config }) => {
+  switch (config.type) {
+    default:
+    case 'PLAIN_TEXT':
+      config.content = config.description.split('\n').map(d => <h4 key={d}>{d}</h4>);
+      break;
+    case 'CHART':
+      config.content = <OrganizationalChart key={config} />;
+      break;
+    case 'CARD_LIST':
+      config.content = <CardList key={config} cards={config.cards} />
+      break;
+  }
+
+  return <div className="step" style={{ backgroundColor: config.color, color: config.fontColor }}>
+    <h1>{config.title}</h1>
+    {config.content}
   </div >
 };
 

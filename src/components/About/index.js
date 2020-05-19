@@ -12,17 +12,18 @@ const About = () => {
 
   const steps = [
     {
+      type: 'PLAIN_TEXT',
       title: "Quem somos nós",
       description: "Somos um banco de investimentos de gestão de fortunas com mais de 150 anos de existência. Nosso foco principal é trazer ao nosso cliente o melhor atendimento do mercado e os melhores produtos disponíveis no ramo de serviços financeiros. \n" +
-      "Oferecemos serviços desde a administração de fundos de renda fixa à assessoria direta de investimentos em equities mundiais, rentabilizando da melhor maneira o patrimônio do nosso cliente, alinhados sempre com os perfis de risco que cada pessoa têm, em respeito ao seu momento de vida atual. \n" +
-      "Contamos com profissionais altamente capacitados para gerir os recursos de nossos clientes, entendendo sempre a necessidade pessoal.",
+        "Oferecemos serviços desde a administração de fundos de renda fixa à assessoria direta de investimentos em equities mundiais, rentabilizando da melhor maneira o patrimônio do nosso cliente, alinhados sempre com os perfis de risco que cada pessoa têm, em respeito ao seu momento de vida atual. \n" +
+        "Contamos com profissionais altamente capacitados para gerir os recursos de nossos clientes, entendendo sempre a necessidade pessoal.",
       color: "#DB0011",
       fontColor: "white"
     },
     {
+      type: 'CHART',
       title: "Board Executivo",
-      description: "TBD",
-      color: "white",
+      color: "#FFFFFF",
       fontColor: "black"
     }
   ];
@@ -30,7 +31,7 @@ const About = () => {
   return <div>
     <Header />
     <Banner image="./assets/placeholderBanner.png" title={title} description={description} />
-    { steps.map(s => <Step key={s} title={s.title} description={s.description} color={s.color} fontColor={s.fontColor} />) }
+    { steps.map(s => <Step key={s} config={s}/>) }
   </div>;
 };
 
