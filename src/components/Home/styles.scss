@@ -1,4 +1,4 @@
-div.vantagens {
+div.slick-slider {
 	position: relative;
 	top: -110px;
 
@@ -8,57 +8,17 @@ div.vantagens {
 	
 	div.slick-list {
 		height: 225px;
-	}
-
-	div.item-info {
-		background-color: white;
-		padding: 10px 15px;
-		border-radius: 20px;
-		text-align: center;
-		color: #db0011;
-		box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.25);
-		max-width: 250px;
-		min-height: 185px;
-		margin: 0 auto;
-		transition: 300ms all ease 0s;
-
-		&:hover {
-			color: white;
-			background-color: lighten(#db0011, 15%);
-			transition: 300ms all ease 0s;
-
-			img {
-				filter: brightness(0) invert(1);
-				transition: 300ms all ease 0s;
-			}
-		}
 
 		@media (max-width: 991px) {
-			min-height: 220px;
+			height: 250px;
 		}
+	}
+}
 
-		img {
-			margin: 0 auto;
-			max-width: 70px;
-			transition: 300ms all ease 0s;
-		}
+div.accordion {
+	top: -90px;
 
-		h6 {
-			font-weight: 700;
-			font-size: 1.1rem;
-			line-height: 1.1rem;
-			margin-top: 5px;
-			margin-bottom: 10px;
-			text-transform: uppercase;
-		}
-
-		p {
-			margin-top: 5px;
-			font-size: 0.9rem;
-
-			@media (max-width: 991px) {
-				font-size: 1.1rem;
-			}
-		}
+	@media (max-width: 991px) {
+		top: -40px;
 	}
 }

@@ -118,7 +118,7 @@ const Home = () => {
   return <div>
     <Header />
     <Banner image="./assets/homeBanner.png" title={title} description={description} button={button} />
-    <div className="container vantagens">
+    <div className="container">
       <Slider {...sliderSettings}>
         {cards.map((c, index) => <Card key={index} config={c} />)}
       </Slider>
