@@ -6,6 +6,7 @@ import Banner from '../Banner';
 import Card from '../Card';
 
 import './styles.scss';
+import Accordion from '../Accordion/Accordion';
 
 const Home = () => {
   const title = "Bem-Vinda, Los Santos!";
@@ -34,6 +35,64 @@ const Home = () => {
     },
   ]
 
+  const accordion =
+  {
+    title: 'Soluções',
+    items: [
+      {
+        title: 'Para você',
+        subItems: [
+          {
+            title: 'Google',
+            link: '/carreiras'
+          },
+          {
+            title: 'Google',
+            link: '/carreiras'
+          },
+          {
+            title: 'Google',
+            link: '/carreiras'
+          },
+        ]
+      },
+      {
+        title: 'Para sua empresa',
+        subItems: [
+          {
+            title: 'facebook',
+            link: '/midia'
+          },
+          {
+            title: 'facebook',
+            link: '/midia'
+          },
+          {
+            title: 'facebook',
+            link: '/midia'
+          },
+        ]
+      },
+      {
+        title: 'Veja também',
+        subItems: [
+          {
+            title: 'pornhub',
+            link: '/contato'
+          },
+          {
+            title: 'pornhub',
+            link: '/contato'
+          },
+          {
+            title: 'pornhub',
+            link: '/contato'
+          },
+        ]
+      }
+    ]
+  };
+
   const sliderSettings = {
     dots: false,
     arrows: false,
@@ -61,6 +120,7 @@ const Home = () => {
         {cards.map(c => <Card key={c} svg={c.svg} title={c.title} description={c.description} />)}
       </Slider>
     </div>
+    <Accordion title={accordion.title} items={accordion.items} />
   </div>;
 };
 
