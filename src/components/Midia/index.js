@@ -2,6 +2,7 @@ import React from 'react';
 
 import Header from '../Header';
 import Banner from '../Banner';
+import Footer from '../Footer';
 
 import './styles.scss';
 
@@ -12,6 +13,7 @@ const Midia = () => {
   return <div>
     <Header />
     <Banner image="./assets/placeholderBanner.png" title={title} description={description} />
+    <Footer />
   </div>;
 };
 

@@ -22,7 +22,7 @@ const Step = ({ config }) => {
   return <div className="step" style={{ backgroundColor: config.color, color: config.fontColor }}>
     <h1>{config.title}</h1>
     {config.content}
-  </div >
+  </div>
 };
 
 export default Step;

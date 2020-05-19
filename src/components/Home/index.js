@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import Header from '../Header';
 import Banner from '../Banner';
 import Card from '../Card';
+import Footer from '../Footer';
 
 import './styles.scss';
 import Accordion from '../Accordion/Accordion';
@@ -124,6 +125,7 @@ const Home = () => {
       </Slider>
     </div>
     <Accordion title={accordion.title} items={accordion.items} />
+    <Footer />
   </div>;
 };
 

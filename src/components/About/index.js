@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '../Header';
 import Banner from '../Banner';
 import Step from '../Step';
+import Footer from '../Footer';
 
 import './styles.scss';
 
@@ -32,6 +33,7 @@ const About = () => {
     <Header />
     <Banner image="./assets/placeholderBanner.png" title={title} description={description} />
     { steps.map((s, index) => <Step key={index} config={s}/>) }
+    <Footer />
   </div>;
 };
 
