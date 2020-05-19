@@ -1,7 +1,14 @@
 header#main-header {
 	padding: 5px;
 	height: 50px;
-	background-color: white;
+    background-color: white;
+    
+    div.menu-mobile {
+        svg {
+            margin-top: 5px;
+            height: 30px;
+        }
+    }
 
 	div.logo {
         color: black;
