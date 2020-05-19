@@ -22,7 +22,7 @@ const Careers = () => {
           career: 'Analista de tecnologia',
           sector: 'Engenharia de software',
           creation: 'publicado 1 dia atrás',
-          link: 'https://google.com'
+          link: 'https://discord.gg/hH24xqW'
         },
         {
           type: 'CAREER',
@@ -30,7 +30,7 @@ const Careers = () => {
           career: 'Gerente de risco de crédito',
           sector: 'Credit policies',
           creation: 'publicado 5 dias atrás',
-          link: 'https://google.com'
+          link: 'https://discord.gg/hH24xqW'
         },
         {
           type: 'CAREER',
@@ -38,7 +38,7 @@ const Careers = () => {
           career: 'Estágio em equity research',
           sector: 'Investment banking',
           creation: 'publicado 2 semanas atrás',
-          link: 'https://google.com'
+          link: 'https://discord.gg/hH24xqW'
         },
         {
           type: 'CAREER',
@@ -46,7 +46,7 @@ const Careers = () => {
           career: 'Analista de investimentos',
           sector: 'Investment banking',
           creation: 'publicado 3 semanas atrás',
-          link: 'https://google.com'
+          link: 'https://discord.gg/hH24xqW'
         },
         {
           type: 'CAREER',
@@ -54,7 +54,7 @@ const Careers = () => {
           career: 'Analista de equities e renda fixa',
           sector: 'Mesa de operações',
           creation: 'publicado 1 mês atrás',
-          link: 'https://google.com'
+          link: 'https://discord.gg/hH24xqW'
         },
         {
           type: 'CAREER',
@@ -62,7 +62,7 @@ const Careers = () => {
           career: 'Nome do cargo da oportunidade',
           sector: 'Nome da área',
           creation: 'publicado 2 anos atrás',
-          link: 'https://google.com'
+          link: 'https://discord.gg/hH24xqW'
         }
       ],
       color: "#FFFFFF",

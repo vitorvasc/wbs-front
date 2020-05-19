@@ -23,13 +23,19 @@ const Footer = () => {
                     <div className="row">
                         <div className="row">
                             <div className="col s4">
-                                <img src={LogoDiscord} alt="Discord" />
+                                <a href="https://discord.gg/hH24xqW" target="_blank" rel="noopener noreferrer">
+                                    <img src={LogoDiscord} alt="Discord" />
+                                </a>
                             </div>
                             <div className="col s4">
-                                <img src={LogoAdrp} alt="Advanced-Roleplay" />
+                                <a href="https://advanced-roleplay.com.br" target="_blank" rel="noopener noreferrer">
+                                    <img src={LogoAdrp} alt="Advanced-Roleplay" />
+                                </a>
                             </div>
                             <div className="col s4">
-                                <img src={LogoWbs} alt="WBS" />
+                                <a href="https://forum.advanced-roleplay.com.br/viewtopic.php?f=876&t=86504" target="_blank" rel="noopener noreferrer">
+                                    <img src={LogoWbs} alt="WBS" />
+                                </a>
                             </div>
                         </div>
                     </div>
