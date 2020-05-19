@@ -47,15 +47,15 @@ const Home = () => {
         title: 'Para você',
         subItems: [
           {
-            title: 'Google',
+            title: 'Créditos e financiamentos',
             link: '/carreiras'
           },
           {
-            title: 'Google',
+            title: 'Investimentos',
             link: '/carreiras'
           },
           {
-            title: 'Google',
+            title: 'Renegociação de dívida',
             link: '/carreiras'
           },
         ]
@@ -64,34 +64,42 @@ const Home = () => {
         title: 'Para sua empresa',
         subItems: [
           {
-            title: 'facebook',
-            link: '/midia'
+            title: 'Créditos e financiamentos',
+            link: '/carreiras'
           },
           {
-            title: 'facebook',
-            link: '/midia'
+            title: 'Investimentos',
+            link: '/carreiras'
           },
           {
-            title: 'facebook',
-            link: '/midia'
+            title: 'Renegociação de dívida',
+            link: '/carreiras'
           },
+          {
+            title: 'Folha de pagamento',
+            link: '/carreiras'
+          }
         ]
       },
       {
         title: 'Veja também',
         subItems: [
           {
-            title: 'pornhub',
-            link: '/contato'
+            title: 'Quem somos nós',
+            link: '/quem-somos-nos'
           },
           {
-            title: 'pornhub',
-            link: '/contato'
+            title: 'Carreiras',
+            link: '/carreiras'
           },
           {
-            title: 'pornhub',
-            link: '/contato'
+            title: 'Mídia',
+            link: '/midia'
           },
+          {
+            title: 'Contato',
+            link: '/contato'
+          }
         ]
       }
     ]

@@ -1,7 +1,55 @@
 footer#main-footer {
 	padding: 5px;
-	height: 300px;
-    background-color: #222222;
+	padding-top: 20px;
+	background-color: #222222;
+	color: white;
+	text-align: left;
+	font-size: 0.8rem;
+	line-height: 1.1rem;
+	position: relative;
 
-    user-select: none;
+	user-select: none;
+
+	@media only screen and (min-width: 993px) {
+		.container {
+			width: 85%;
+		}
+	}
+
+	div.row {
+		margin-bottom: 0;
+    }
+
+	div.links {
+		text-align: center;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+
+		img {
+			max-width: 45px;
+		}
+	}
+
+	div.credits {
+		text-align: center;
+	}
+
+	div.copyright, div.credits {
+		p {
+			margin-bottom: 0px;
+		}
+	}
+
+	div.top {
+		position: absolute;
+		right: 80px;
+		top: 0px;
+
+		svg {
+			width: 35px;
+			cursor: pointer;
+		}
+	}
 }
