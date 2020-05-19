@@ -37,6 +37,10 @@ const Footer = () => {
             <div className="col s4">
               <img src={LogoWbs} alt="WBS" />
             </div>
+                        <div className="row">
+                            <p>Idealizado e desenvolvido por<br />
+Victor Ferraresi e Vitor Vasconcellos</p>
+                        </div>
           </div>
           <div className="row">
             <p>
