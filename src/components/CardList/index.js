@@ -6,7 +6,7 @@ import './styles.scss';
 
 const CardList = ({cards}) => (
   <div>
-    { cards.map(c => <Card key={c} config={c} />)}
+    { cards.map((c, index) => <Card key={index} config={c} />)}
   </div>
 );
 

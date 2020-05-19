@@ -66,7 +66,7 @@ const Careers = () => {
   return <div>
     <Header />
     <Banner image="./assets/placeholderBanner.png" title={title} description={description} />
-    { steps.map(s => <Step key={s} config={s} />) }
+    { steps.map((s, index) => <Step key={index} config={s} />) }
   </div>;
 };
 

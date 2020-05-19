@@ -120,7 +120,7 @@ const Home = () => {
     <Banner image="./assets/homeBanner.png" title={title} description={description} button={button} />
     <div className="container vantagens">
       <Slider {...sliderSettings}>
-        {cards.map(c => <Card key={c} config={c} />)}
+        {cards.map((c, index) => <Card key={index} config={c} />)}
       </Slider>
     </div>
     <Accordion title={accordion.title} items={accordion.items} />
