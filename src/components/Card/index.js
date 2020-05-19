@@ -13,11 +13,13 @@ const Card = ({ config }) => {
         <p>{config.description}</p>
       </div>
     case 'CAREER':
-      return <div className="item-career">        
-        <h6>{config.location}</h6>
-        <p>{config.career}</p>
-        <p>{config.section}</p>
-        <p>{config.creation}</p>
+      return <div className="item-career">
+        <a href={config.link} target="_blank" rel="noopener noreferrer">
+          <h6>{config.location}</h6>
+          <h5>{config.career}</h5>
+          <h6>{config.sector}</h6>
+          <span>{config.creation}</span>
+        </a>
       </div>
   }
 }
