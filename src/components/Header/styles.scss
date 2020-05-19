@@ -65,6 +65,7 @@ header#main-header {
     div.conta {
         height: 45px;
         display: flex;
+        justify-content: flex-end;
         align-items: center;
 
         a {
