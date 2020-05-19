@@ -6,6 +6,8 @@ div.step {
     flex-direction: column;
     padding: 50px 0 65px;
 
+    user-select: none;
+
     h1 {
         font-weight: 300;
         font-size: 3.3rem;
