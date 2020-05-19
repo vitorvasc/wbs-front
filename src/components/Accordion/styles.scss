@@ -46,8 +46,7 @@ div.accordion {
 		}
 
 		div.content {
-			padding: 5px 0 5px 10px;
-			margin: 0 0 10px 30px;
+			margin-left: 30px;
 			display: flex;
 			flex-direction: column;
             width: 100%;
@@ -61,6 +60,11 @@ div.accordion {
 				color: white;
 				padding: 7px 0;
 				text-decoration: underline;
+				margin-left: 30px;
+
+				&:last-child {
+					margin-bottom: 10px;
+				}
 			}
 		}
 	}
