@@ -58,7 +58,7 @@ const Home = () => {
     <Banner image="./assets/homeBanner.png" title={title} description={description} button={button} />
     <div className="container vantagens">
       <Slider {...sliderSettings}>
-        {cards.map(c => <Card svg={c.svg} title={c.title} description={c.description} />)}
+        {cards.map(c => <Card key={c} svg={c.svg} title={c.title} description={c.description} />)}
       </Slider>
     </div>
   </div>;
