@@ -13,8 +13,8 @@ const About = () => {
   const steps = [
     {
       title: "Quem somos nós",
-      description: "Somos um banco de investimentos de gestão de fortunas com mais de 150 anos de existência. Nosso foco principal é trazer ao nosso cliente o melhor atendimento do mercado e os melhores produtos disponíveis no ramo de serviços financeiros. <br />" +
-      "Oferecemos serviços desde a administração de fundos de renda fixa à assessoria direta de investimentos em equities mundiais, rentabilizando da melhor maneira o patrimônio do nosso cliente, alinhados sempre com os perfis de risco que cada pessoa têm, em respeito ao seu momento de vida atual." +
+      description: "Somos um banco de investimentos de gestão de fortunas com mais de 150 anos de existência. Nosso foco principal é trazer ao nosso cliente o melhor atendimento do mercado e os melhores produtos disponíveis no ramo de serviços financeiros. \n" +
+      "Oferecemos serviços desde a administração de fundos de renda fixa à assessoria direta de investimentos em equities mundiais, rentabilizando da melhor maneira o patrimônio do nosso cliente, alinhados sempre com os perfis de risco que cada pessoa têm, em respeito ao seu momento de vida atual. \n" +
       "Contamos com profissionais altamente capacitados para gerir os recursos de nossos clientes, entendendo sempre a necessidade pessoal.",
       color: "#DB0011",
       fontColor: "white"
