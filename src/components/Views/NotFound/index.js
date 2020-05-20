@@ -8,7 +8,7 @@ import Footer from '../../Footer';
 import './styles.scss';
 
 const NotFound = () => {
-  const title = "Ooops";
+  const title = "Ooops!";
   const description = "Acho que você está perdido, cowboy. Como veio parar aqui mesmo?";
 
   const button = {
