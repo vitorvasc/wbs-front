@@ -19,5 +19,9 @@ body {
 		display: block;
 		position: relative;
 		padding-bottom: 155px; /* height of your footer */
+
+		@media(max-width: 991px) {
+			padding-bottom: 285px;
+		}
 	}
 }

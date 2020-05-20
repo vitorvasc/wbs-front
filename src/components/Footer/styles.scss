@@ -44,6 +44,10 @@ footer#main-footer {
 	div.credits {
 		p {
 			margin-bottom: 0px;
+
+			@media(max-width: 991px) {
+				text-align: center;
+			}
 		}
 	}
 
@@ -51,6 +55,10 @@ footer#main-footer {
 		position: absolute;
 		right: 80px;
 		top: 0px;
+
+		@media(max-width: 991px) {
+			right: 5px;
+		}
 
 		svg {
 			width: 35px;

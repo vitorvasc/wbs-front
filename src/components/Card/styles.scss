@@ -132,6 +132,14 @@ div.item-chart {
 	min-height: 150px;
 	padding: 30px 15px 0px;
 	margin: 0 auto;
+
+	@media(max-width: 991px) {
+		max-width: 100%;
+		
+		&:not(:first-child) {
+			margin-top: 20px;
+		}
+	}
 	
 	h6 {
 		font-weight: 700;
