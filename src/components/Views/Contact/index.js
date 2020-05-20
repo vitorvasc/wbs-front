@@ -12,7 +12,7 @@ const Contact = () => {
 
   return <div>
     <Header />
-    <Banner image="./assets/placeholderBanner.png" title={title} description={description} />
+    <Banner image="./assets/contactBanner.png" title={title} description={description} />
     <Footer />
   </div>;
 };

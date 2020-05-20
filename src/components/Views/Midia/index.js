@@ -23,7 +23,7 @@ const Midia = () => {
 
   return <div>
     <Header />
-    <Banner image="./assets/placeholderBanner.png" title={title} description={description} />
+    <Banner image="./assets/midiaBanner.png" title={title} description={description} />
     { steps.map((s, index) => <Step key={index} config={s}/>) }
     <Footer />
   </div>;

@@ -30,7 +30,7 @@ const PersonalInvesting = () => {
 
   return <div>
     <Header />
-    <Banner image="./assets/placeholderBanner.png" title={title} description={description} button={button} />
+    <Banner image="./assets/investingBanner.png" title={title} description={description} button={button} />
     { steps.map((s, index) => <Step key={index} config={s}/>) }
     <Footer />
   </div>
