@@ -1,25 +1,59 @@
 header#main-header {
 	padding: 5px;
 	height: 50px;
-    background-color: white;
+	background-color: white;
 
-    user-select: none;
+	user-select: none;
 
-    @media only screen and (min-width: 993px) {
-        .container {
-            width: 85%;
+	@media only screen and (min-width: 993px) {
+		.container {
+			width: 85%;
+		}
+	}
+
+	div.menu-mobile {
+		transition: 200ms all ease-in-out 0s;
+		position: absolute;
+        left: 25px;
+        
+        @media(min-width: 992px) {
+            display: none;
         }
-    }  
-    
-    div.menu-mobile {
-        svg {
-            margin-top: 5px;
-            height: 30px;
-        }
-    }
+
+		div.icon {
+			svg {
+				margin-top: 5px;
+				height: 30px;
+			}
+		}
+
+		div.categories {
+			z-index: 1;
+			background-color: #db0011;
+			color: white;
+			width: 100vw;
+			position: absolute;
+			left: -25px;
+			top: 45px;
+			transition: max-height 0.6s ease;
+			overflow: hidden;
+
+			display: flex;
+			flex-direction: column;
+
+			a {
+				color: white;
+                padding: 10px 0 10px 30px;
+                
+                &.nav-selected {
+                    background-color: darken(#db0011, 10%);
+                }
+			}
+		}
+	}
 
 	div.logo {
-        color: black;
+		color: black;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -35,50 +69,50 @@ header#main-header {
 			margin-top: 0;
 			margin-bottom: 0;
 		}
-    }
-    
-    div.links {
-        height: 45px;
-        display: flex;
-        align-items: center;
-        
-        a {
-            padding: 0 30px;
-            font-weight: 300;
-            color: black;
-            height: 45px;
-            display: flex;
-            align-items: center;
-            border-bottom: 3px solid transparent;
-            transition: 300ms all ease 0s;
-            margin: 0 auto;
+	}
 
-            &:hover {
-                border-bottom: 3px solid lighten(#DB0011, 25%);
-                transition: 300ms all ease 0s;
-            }
+	div.links {
+		height: 45px;
+		display: flex;
+		align-items: center;
 
-            &.nav-selected {
-                border-bottom: 3px solid #DB0011;
-                transition: 300ms all ease 0s;
-            }
-        }
-    }
+		a {
+			padding: 0 30px;
+			font-weight: 300;
+			color: black;
+			height: 45px;
+			display: flex;
+			align-items: center;
+			border-bottom: 3px solid transparent;
+			transition: 300ms all ease 0s;
+			margin: 0 auto;
 
-    div.conta {
-        height: 45px;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+			&:hover {
+				border-bottom: 3px solid lighten(#db0011, 25%);
+				transition: 300ms all ease 0s;
+			}
 
-        a {
-            display: flex;
-            font-weight: 400;
-            color: black;
+			&.nav-selected {
+				border-bottom: 3px solid #db0011;
+				transition: 300ms all ease 0s;
+			}
+		}
+	}
 
-            svg {
-                margin-right: 5px;
-            }
-        }
-    }
+	div.conta {
+		height: 45px;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+
+		a {
+			display: flex;
+			font-weight: 400;
+			color: black;
+
+			svg {
+				margin-right: 5px;
+			}
+		}
+	}
 }

@@ -13,7 +13,7 @@ const Header = () => (
         <MenuMobile />
 
         <Link to="/">
-          <div className="col s10 l2 logo">
+          <div className="col s12 l2 logo">
             <img src={logo} alt="WBS" />
             <h5>WBS</h5>
           </div>
