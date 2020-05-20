@@ -37,7 +37,7 @@ const About = () => {
           image: './assets/richardowens.png',
           name: 'Ricard Owens',
           rank: 'Chief Financial Officer',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur sed arcu vitae dapibus. Ut id pharetra eros. In ullamcorper quam ut mauris ornare commodo. Maecenas aliquam.'
+          description: 'Norte-americano e empreendedor, Owens se formou em Economia pela Universidade de Harvard e se tornou um dos Forbes 30 Under 30 após vender sua start-up, Cash4U, por um valor de aproximadamente 46 milhões de dólares.'
         },
         {
           type: 'CHART',
@@ -49,7 +49,7 @@ const About = () => {
         {
           type: 'CHART',
           image: './assets/georgetheiss.png',
-          name: 'John Doe',
+          name: 'Andy Firestone',
           rank: 'Chief Information Officer',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur sed arcu vitae dapibus. Ut id pharetra eros. In ullamcorper quam ut mauris ornare commodo. Maecenas aliquam.'
         }
