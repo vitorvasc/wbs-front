@@ -1,13 +1,13 @@
 import React from 'react';
 import Slider from 'react-slick';
 
-import Header from '../Header';
-import Banner from '../Banner';
-import Card from '../Card';
-import Footer from '../Footer';
+import Header from '../../Header';
+import Banner from '../../Banner';
+import Card from '../../Card';
+import Footer from '../../Footer';
 
 import './styles.scss';
-import Accordion from '../Accordion/Accordion';
+import Accordion from '../../Accordion/Accordion';
 
 const Home = () => {
   const title = "Bem-Vinda, Los Santos!";
@@ -48,15 +48,15 @@ const Home = () => {
         subItems: [
           {
             title: 'Créditos e financiamentos',
-            link: '/carreiras'
+            link: '/para-voce/credito'
           },
           {
             title: 'Investimentos',
-            link: '/carreiras'
+            link: '/para-voce/investimentos'
           },
           {
             title: 'Renegociação de dívida',
-            link: '/carreiras'
+            link: '/para-voce/renegociacao'
           },
         ]
       },
@@ -65,19 +65,19 @@ const Home = () => {
         subItems: [
           {
             title: 'Créditos e financiamentos',
-            link: '/carreiras'
+            link: '/para-sua-empresa/credito'
           },
           {
             title: 'Investimentos',
-            link: '/carreiras'
+            link: '/para-sua-empresa/investimentos'
           },
           {
             title: 'Renegociação de dívida',
-            link: '/carreiras'
+            link: '/para-sua-empresa/renegociacao'
           },
           {
             title: 'Folha de pagamento',
-            link: '/carreiras'
+            link: '/para-sua-empresa/folha-de-pagamento'
           }
         ]
       },
