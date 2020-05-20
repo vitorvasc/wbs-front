@@ -23,6 +23,14 @@ const Card = ({ config }) => {
           </a>
         </div>
       </div>
+    case 'CHART':
+      const photo = require(`${config.image}`)
+      return <div className="item-chart">
+        <img src={photo} alt={config.name} />
+        <h5>{config.name}</h5>
+        <span>{config.rank}</span>
+        <p>{config.description}</p>
+      </div>
   }
 }
 
