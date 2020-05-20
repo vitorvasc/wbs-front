@@ -12,7 +12,7 @@ const Step = ({ config }) => {
       config.content = config.description.split('\n').map(d => <h4 key={d}>{d}</h4>);
       break;
     case 'CHART':
-      config.content = <OrganizationalChart />;
+      config.content = <OrganizationalChart cards={config.cards}/>;
       break;
     case 'CARD_LIST':
       config.content = <CardList cards={config.cards} />

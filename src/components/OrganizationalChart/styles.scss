@@ -1,0 +1,10 @@
+div.chart {
+    div.row:not(:first-child) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    div.row {
+        margin-bottom: 80px;
+    }
+}

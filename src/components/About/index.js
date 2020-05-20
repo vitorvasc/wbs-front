@@ -24,6 +24,36 @@ const About = () => {
     {
       type: 'CHART',
       title: "Board Executivo",
+      cards: [
+        {
+          type: 'CHART',
+          image: './assets/georgetheiss.png',
+          name: 'George Theiss',
+          rank: 'Chief Executive Officer',
+          description: 'Banqueiro suíço e ex-operador de ações. Com um patrimônio líquido estimado em 65 bilhões de dólares, Theiss detém atualmente o fundo de equities mais performático da última década.'
+        },
+        {
+          type: 'CHART',
+          image: './assets/richardowens.png',
+          name: 'Ricard Owens',
+          rank: 'Chief Financial Officer',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur sed arcu vitae dapibus. Ut id pharetra eros. In ullamcorper quam ut mauris ornare commodo. Maecenas aliquam.'
+        },
+        {
+          type: 'CHART',
+          image: './assets/georgetheiss.png',
+          name: 'John Doe',
+          rank: 'Chief Operating Officer',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur sed arcu vitae dapibus. Ut id pharetra eros. In ullamcorper quam ut mauris ornare commodo. Maecenas aliquam.'
+        },
+        {
+          type: 'CHART',
+          image: './assets/georgetheiss.png',
+          name: 'John Doe',
+          rank: 'Chief Information Officer',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur sed arcu vitae dapibus. Ut id pharetra eros. In ullamcorper quam ut mauris ornare commodo. Maecenas aliquam.'
+        }
+      ],
       color: "#FFFFFF",
       fontColor: "black"
     }

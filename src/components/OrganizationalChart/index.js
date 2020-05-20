@@ -1,10 +1,20 @@
 import React from 'react';
 
+import Card from '../Card';
+
 import './styles.scss';
 
-const OrganizationalChart = () => {
+const OrganizationalChart = ({cards}) => {
 
-  return <div className="chart">
+  const first = cards.shift();
+
+  return <div className="container chart">
+    <div className="row">      
+      <Card config={first} />      
+    </div>
+    <div className="row">
+        { cards.map((p, index) => <Card key={index} config={p} />) }
+    </div>
   </div>
 };
 

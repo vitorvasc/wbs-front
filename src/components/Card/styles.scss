@@ -122,3 +122,38 @@ div.box-career {
 		}
 	}
 }
+
+div.item-chart {
+	border-right: 1px solid #b1b1b1;
+	border-left: 1px solid #b1b1b1;
+	border-bottom: 1px solid #b1b1b1;
+	border-top: 4px solid #db0011;
+	max-width: 28%;
+	min-height: 150px;
+	padding: 30px 15px 0px;
+	margin: 0 auto;
+	
+	h6 {
+		font-weight: 700;
+		font-size: 1.1rem;
+		line-height: 1.1rem;
+		margin-top: 5px;
+		margin-bottom: 10px;
+
+		&.location {
+			text-transform: uppercase;
+		}
+	}
+
+	h5 {		
+		font-weight: 700;
+	}
+
+	span {
+		color: #a9a9a9;		
+	}
+
+	p {
+		text-align: left;
+	}
+}
