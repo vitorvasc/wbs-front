@@ -41,14 +41,14 @@ const About = () => {
         },
         {
           type: 'CHART',
-          image: './assets/georgetheiss.png',
-          name: 'John Doe',
+          image: './assets/henrymhaywonder.png',
+          name: 'Henry Mhaywonder',
           rank: 'Chief Operating Officer',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur sed arcu vitae dapibus. Ut id pharetra eros. In ullamcorper quam ut mauris ornare commodo. Maecenas aliquam.'
+          description: 'Nascido e formado em Los Santos, Mhaywonder já encabeçou a operação de grandes empresas como: Burguer Shot (2007-2012), Juank Air (2012-2016) e Roboi\'s Food Mart, de onde vêm para a inovação bancária.'
         },
         {
           type: 'CHART',
-          image: './assets/georgetheiss.png',
+          image: './assets/andyfirestone.png',
           name: 'Andy Firestone',
           rank: 'Chief Information Officer',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur sed arcu vitae dapibus. Ut id pharetra eros. In ullamcorper quam ut mauris ornare commodo. Maecenas aliquam.'
