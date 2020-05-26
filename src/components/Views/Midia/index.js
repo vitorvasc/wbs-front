@@ -1,32 +1,43 @@
 import React from 'react';
+import axios from 'axios';
 
 import Header from '../../Header';
 import Banner from '../../Banner';
 import Step from '../../Step';
 import Footer from '../../Footer';
+import PageLoader from '../../PageLoader';
 
 import './styles.scss';
 
-const Midia = () => {
-  const title = "Dinamicidade";
-  const description = "Vivemos em um mundo cada vez mais conectado, onde as notícias percorrem o globo com cada vez mais velocidade. Como estas notícias podem afetar os seus investimentos?";
+class Midia extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
 
-  const steps = [
-    {
-      type: 'PLAIN_TEXT',
-      title: "Em breve...",
-      description: "...você poderá acompanhar as últimas notícias políticas e econômicas de Los Santos e do mundo em tempo real para que possa tomar a melhor decisão em seus investimentos.",
-      color: "#FFFFFF",
-      fontColor: "black"
+    this.apiUrl = "http://localhost:3007/pages/midia"; // TODO externalizar configuração
+  }
+
+  componentDidMount() {
+    axios({ method: 'get', url: `${this.apiUrl}` })
+      .then(response => {
+        this.setState({
+          content: response.data
+        });
+      });
+  }
+
+  render() {
+    if (!!this.state.content) {
+      return <div>
+        <Header />
+        <Banner image={this.state.content.image} title={this.state.content.title} description={this.state.content.description} />
+        { this.state.content.steps.map((s, index) => <Step key={index} config={s}/>) }
+        <Footer />
+      </div>;
+    } else {
+      return <PageLoader />;
     }
-  ];
-
-  return <div>
-    <Header />
-    <Banner image="./assets/midiaBanner.png" title={title} description={description} />
-    { steps.map((s, index) => <Step key={index} config={s}/>) }
-    <Footer />
-  </div>;
+  }
 };
 
 export default Midia;

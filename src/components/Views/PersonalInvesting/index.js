@@ -1,39 +1,43 @@
 import React from 'react';
+import axios from 'axios';
 
 import Header from '../../Header';
 import Banner from '../../Banner';
 import Step from '../../Step';
 import Footer from '../../Footer';
+import PageLoader from '../../PageLoader';
 
 import './styles.scss';
 
-const PersonalInvesting = () => {
-  const title = "O melhor investimento para você";
-  const description = "Conte com a assessoria de economistas profissionais para alavancar seus ganhos.";
+class PersonalInvesting extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
 
-  const button = {
-    text: "Abra sua conta",
-    action: "/onboarding"
-  };
+    this.apiUrl = "http://localhost:3007/pages/personalinvesting"; // TODO externalizar configuração
+  }
 
-  const steps = [
-    {
-      type: 'PLAIN_TEXT',
-      title: "Começe a investir com o valor de um donut",
-      description: "Você sabia que pode começar investir com menos de $100? Abra sua conta conosco e explore as nossas opções de investimento, que vão desde o perfil " + 
-      "mais conservador até o mais agressivo! Conte com a mentoria de nossos assessores de investimento para escolher a melhor opção que se encaixa em seu momento " +
-      "de vida.",
-      color: "#FFFFFF",
-      fontColor: "black"
+  componentDidMount() {
+    axios({ method: 'get', url: `${this.apiUrl}` })
+      .then(response => {
+        this.setState({
+          content: response.data
+        });
+      });
+  }
+
+  render() {
+    if (!!this.state.content) {  
+      return <div>
+        <Header />
+        <Banner image={this.state.content.image} title={this.state.content.title} description={this.state.content.description} button={this.state.content.button} />
+        { this.state.content.steps.map((s, index) => <Step key={index} config={s}/>) }
+        <Footer />
+      </div>
+    } else {
+      return <PageLoader />;
     }
-  ];
-
-  return <div>
-    <Header />
-    <Banner image="./assets/investingBanner.png" title={title} description={description} button={button} />
-    { steps.map((s, index) => <Step key={index} config={s}/>) }
-    <Footer />
-  </div>
+  }
 };
 
 export default PersonalInvesting;

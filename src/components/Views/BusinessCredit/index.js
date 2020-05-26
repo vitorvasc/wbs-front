@@ -1,38 +1,43 @@
 import React from 'react';
+import axios from 'axios';
 
 import Header from '../../Header';
 import Banner from '../../Banner';
 import Step from '../../Step';
 import Footer from '../../Footer';
+import PageLoader from '../../PageLoader';
 
 import './styles.scss';
 
-const BusinessCredit = () => {
-  const title = "Crédito acessível para sua empresa";
-  const description = "A gente acredita no potencial do seu negócio.";
+class BusinessCredit extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
 
-  const button = {
-    text: "Abra sua conta",
-    action: "/onboarding"
-  };
+    this.apiUrl = "http://localhost:3007/pages/businesscredit"; // TODO externalizar configuração
+  }
 
-  const steps = [
-    {
-      type: 'PLAIN_TEXT',
-      title: "Solicite uma avaliação da sua operação",
-      description: "Crédito rápido e com ótimas condições de financiamento. Realizamos o financiamento de maquinários, propriedades e outros tipos de bens materiais " +
-        "para sua empresa. Amplie a sua operação e atinja outros patamares em seu negócio.\nAbra sua conta, faça-nos uma visita e apresente o seu sonho!",
-      color: "#FFFFFF",
-      fontColor: "black"
+  componentDidMount() {
+    axios({ method: 'get', url: `${this.apiUrl}` })
+      .then(response => {
+        this.setState({
+          content: response.data
+        });
+      });
+  }
+
+  render() {
+    if (!!this.state.content) {  
+      return <div>
+        <Header />
+        <Banner image={this.state.content.image} title={this.state.content.title} description={this.state.content.description} button={this.state.content.button} />
+        { this.state.content.steps.map((s, index) => <Step key={index} config={s}/>) }
+        <Footer />
+      </div>
+    } else {
+      return <PageLoader />;
     }
-  ];
-
-  return <div>
-    <Header />
-    <Banner image="./assets/businessCreditBanner.png" title={title} description={description} button={button} />
-    { steps.map((s, index) => <Step key={index} config={s}/>) }
-    <Footer />
-  </div>
+  }
 };
 
 export default BusinessCredit;

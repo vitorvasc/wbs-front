@@ -1,37 +1,43 @@
 import React from 'react';
+import axios from 'axios';
 
 import Header from '../../Header';
 import Banner from '../../Banner';
 import Step from '../../Step';
 import Footer from '../../Footer';
+import PageLoader from '../../PageLoader';
 
 import './styles.scss';
 
-const BusinessInvesting = () => {
-  const title = "O melhor investimento para sua empresa";
-  const description = "Proteja o seu capital e trabalhe tranquilo.";
+class BusinessInvesting extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
 
-  const button = {
-    text: "Abra sua conta",
-    action: "/onboarding"
-  };
+    this.apiUrl = "http://localhost:3007/pages/businessinvesting"; // TODO externalizar configuração
+  }
 
-  const steps = [
-    {
-      type: 'PLAIN_TEXT',
-      title: "TBD",
-      description: "TBD.",
-      color: "#FFFFFF",
-      fontColor: "black"
+  componentDidMount() {
+    axios({ method: 'get', url: `${this.apiUrl}` })
+      .then(response => {
+        this.setState({
+          content: response.data
+        });
+      });
+  }
+
+  render() {
+    if (!!this.state.content) {  
+      return <div>
+        <Header />
+        <Banner image={this.state.content.image} title={this.state.content.title} description={this.state.content.description} button={this.state.content.button} />
+        { this.state.content.steps.map((s, index) => <Step key={index} config={s}/>) }
+        <Footer />
+      </div>
+    } else {
+      return <PageLoader />;
     }
-  ];
-
-  return <div>
-    <Header />
-    <Banner image="./assets/investingBanner.png" title={title} description={description} button={button} />
-    { steps.map((s, index) => <Step key={index} config={s}/>) }
-    <Footer />
-  </div>
+  }
 };
 
 export default BusinessInvesting;

@@ -1,38 +1,43 @@
 import React from 'react';
+import axios from 'axios';
 
 import Header from '../../Header';
 import Banner from '../../Banner';
 import Step from '../../Step';
 import Footer from '../../Footer';
+import PageLoader from '../../PageLoader';
 
 import './styles.scss';
 
-const BusinessPayroll = () => {
-  const title = "Controle de folha de pagamento para sua empresa";
-  const description = "Para você focar no que realmente importa.";
+class BusinessPayroll extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
 
-  const button = {
-    text: "Abra sua conta",
-    action: "/onboarding"
-  };
+    this.apiUrl = "http://localhost:3007/pages/businesspayroll"; // TODO externalizar configuração
+  }
 
-  const steps = [
-    {
-      type: 'PLAIN_TEXT',
-      title: "Descubra como podemos operar o seu fluxo de caixa",
-      description: "Controlamos todo o quadro de funcionários da sua empresa, os pagamentos, descontos e processos financeiros para que você " +
-        "continue focando no que realmente importa: a expansão do seu negócio.\nAbra sua conta e deixa a gente te mostrar o que pode fazer por você.",
-      color: "#FFFFFF",
-      fontColor: "black"
+  componentDidMount() {
+    axios({ method: 'get', url: `${this.apiUrl}` })
+      .then(response => {
+        this.setState({
+          content: response.data
+        });
+      });
+  }
+
+  render() {
+    if (!!this.state.content) {  
+      return <div>
+        <Header />
+        <Banner image={this.state.content.image} title={this.state.content.title} description={this.state.content.description} button={this.state.content.button} />
+        { this.state.content.steps.map((s, index) => <Step key={index} config={s}/>) }
+        <Footer />
+      </div>
+    } else {
+      return <PageLoader />;
     }
-  ];
-
-  return <div>
-    <Header />
-    <Banner image="./assets/payrollBanner.png" title={title} description={description} button={button} />
-    { steps.map((s, index) => <Step key={index} config={s}/>) }
-    <Footer />
-  </div>
+  }
 };
 
 export default BusinessPayroll;
