@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
+import config from '../../../config';
+
 import Header from '../../Header';
 import Banner from '../../Banner';
 import Footer from '../../Footer';
@@ -13,7 +15,7 @@ class Contact extends React.Component {
     super(props);
     this.state = {};
 
-    this.apiUrl = "http://localhost:3007/pages/contact"; // TODO externalizar configuração
+    this.apiUrl = `${config.cms.URL}/pages/contact`;
   }
 
   componentDidMount() {

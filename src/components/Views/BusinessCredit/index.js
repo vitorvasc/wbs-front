@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
+import config from '../../../config';
+
 import Header from '../../Header';
 import Banner from '../../Banner';
 import Step from '../../Step';
@@ -14,7 +16,7 @@ class BusinessCredit extends React.Component {
     super(props);
     this.state = {};
 
-    this.apiUrl = "http://localhost:3007/pages/businesscredit"; // TODO externalizar configuração
+    this.apiUrl = `${config.cms.URL}/pages/businesscredit`;
   }
 
   componentDidMount() {
