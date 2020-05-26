@@ -1,8 +1,7 @@
 import React from 'react';
-import axios from 'axios';
 import Slider from 'react-slick';
 
-import config from '../../../config';
+import { cms } from '../../../Axios';
 
 import Header from '../../Header';
 import Banner from '../../Banner';
@@ -17,12 +16,10 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-
-    this.apiUrl = `${config.cms.URL}/pages/home`;
   }
 
   componentDidMount() {
-    axios({ method: 'get', url: `${this.apiUrl}` })
+    cms.get('/pages/home')
       .then(response => {
         this.setState({
           content: response.data

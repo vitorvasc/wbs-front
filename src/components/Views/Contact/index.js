@@ -1,7 +1,6 @@
 import React from 'react';
-import axios from 'axios';
 
-import config from '../../../config';
+import { cms } from '../../../Axios';
 
 import Header from '../../Header';
 import Banner from '../../Banner';
@@ -14,12 +13,10 @@ class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-
-    this.apiUrl = `${config.cms.URL}/pages/contact`;
   }
 
   componentDidMount() {
-    axios({ method: 'get', url: `${this.apiUrl}` })
+    cms.get('/pages/contact')
       .then(response => {
         this.setState({
           content: response.data
