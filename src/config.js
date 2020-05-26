@@ -6,7 +6,7 @@ const dev = {
 
 const prod = {
   cms: {
-    URL: "https://wbs.advanced-roleplay.com.br:3007"
+    URL: "http://wbs.vitorvasconcellos.com.br:3007/"
   }
 };
 
