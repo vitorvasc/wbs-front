@@ -6,7 +6,7 @@ const dev = {
 
 const prod = {
   cms: {
-    URL: "http://wbs.vitorvasconcellos.com.br:3007/"
+    URL: "https://wbs.vitorvasconcellos.com.br:3007/"
   }
 };
 
