@@ -1,0 +1,14 @@
+div.loader {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 100px;
+    user-select: none;
+
+    span {
+        color: white;
+        font-size: .9rem;
+        font-weight: 300;
+    }
+}
